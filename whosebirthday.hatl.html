@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生日快樂網站</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe6e6;
+        }
+        h1 {
+            color: #ff4081;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>生日快樂！🎉</h1>
+    <p>祝你有一個快樂又美好的生日！</p>
+    <button onclick="playMusic()">播放生日快樂歌 🎶</button>
+
+    <audio id="birthdaySong" loop>
+        <source src="your-audio-file.mp3" type="audio/mp3">
+        <!-- 若需要兼容其他瀏覽器，也可以加入 .ogg 格式 -->
+        <source src="your-audio-file.ogg" type="audio/ogg">
+        您的瀏覽器不支援音樂播放功能。
+    </audio>
+
+    <script>
+        function playMusic() {
+            var audio = document.getElementById("birthdaySong");
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+    </script>
+
+</body>
+</html>
